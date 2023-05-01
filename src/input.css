@@ -1,0 +1,31 @@
+@font-face {
+	font-family: "Mangueira";
+	src: url("/assets/fonts/Mangueira/Mangueira-Bold.otf");
+	font-weight: 700;
+}
+@font-face {
+	font-family: "Mangueira";
+	src: url("/assets/fonts/Mangueira/Mangueira-Light.otf");
+	font-weight: 100;
+}
+@font-face {
+	font-family: "Mangueira";
+	src: url("/assets/fonts/Mangueira/Mangueira-Medium.otf");
+	font-weight: 600;
+}
+@font-face {
+	font-family: "Mangueira";
+	src: url("/assets/fonts/Mangueira/MangueiraAlt-Regular.otf");
+	font-weight: 400;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	font-family: "Mangueira", ui-sans-serif, system-ui, -apple-system,
+		BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+		"Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol", "Noto Color Emoji";
+}

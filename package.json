@@ -1,0 +1,55 @@
+{
+  "name": "rockets-web",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": "14.x"
+  },
+  "type": "module",
+  "scripts": {
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
+    "dev": "concurrently -n tailwindcss,vite -c yellow,cyan \"yarn watch:css\" \"yarn vite\"",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.13",
+    "@hookform/resolvers": "^2.9.8",
+    "@types/styled-components": "^5.1.26",
+    "@types/yup": "^0.32.0",
+    "axios": "^1.1.2",
+    "dotenv": "^16.0.3",
+    "primeflex": "^3.2.1",
+    "primeicons": "^6.0.1",
+    "primereact": "^8.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.35.0",
+    "react-router-dom": "^6.4.0",
+    "styled-components": "^5.3.9",
+    "vite-plugin-ssr": "^0.4.99",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.5",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "2.8.6",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
+  }
+}
